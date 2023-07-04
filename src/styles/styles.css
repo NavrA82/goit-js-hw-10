@@ -1,32 +1,72 @@
 body {
-  background-color: bisque;
+  background-color: rgba(238, 191, 49, 0.5);
 }
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-.wrap-key {
-  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  margin-left: auto;
+  margin-right: auto;
 }
 .cat-info {
-  width: 1050px;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 320px;
 }
-.ss-main.breed-select {
-  width: 260px;
-  border-radius: 5px;
-  border: 2px solid gray;
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-right: auto;
-  cursor: ;
+.breed-select {
+  display: flex;
+  justify-content: center;
+  max-width: 320px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+h2 {
+  text-align: center;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+}
+.error {
+}
+.wrap-key {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  flex-direction: column;
+  align-items: center;
+}
+.description {
+  text-align: center;
 }
 
+.link {
+  display: flex;
+  justify-content: center;
+}
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 /* fading title effect */
 .visually-hidden {

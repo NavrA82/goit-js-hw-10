@@ -55,15 +55,15 @@ getCatBreeds()
 
 ref.catCard.innerHTML = '';
 
-window.addEventListener('beforeunload', function (event) {
-  event.preventDefault();
-  event.returnValue = 'Ви впевнені, що хочете покинути цю сторінку?';
-});
+// window.addEventListener('beforeunload', function (event) {
+//   event.preventDefault();
+//   event.returnValue = 'Ви впевнені, що хочете покинути цю сторінку?';
+// });
 
 ref.breedSelect.addEventListener('change', evt => {
-  ref.loaderMassage.classList.remove('is-hidden');
+  // ref.loaderMassage.classList.remove('is-hidden');
 
-  ref.errorMassage.classList.remove('is-hidden');
+  // ref.errorMassage.classList.remove('is-hidden');
 
   const selectedBreedId = evt.currentTarget.value;
 
@@ -79,10 +79,11 @@ ref.breedSelect.addEventListener('change', evt => {
           </div>
           <div class="wrap-description">
             <h2>${breeds[0].name}</h2>
-            <p><span class="wrap-key">Origin: </span>${breeds[0].origin}</p>
-            <p><span class="wrap-key">Description: </span>${breeds[0].description}</p>
-            <p><span class="wrap-key">Temperament: </span>${breeds[0].temperament}</p>
-            <a href="${breeds[0].wikipedia_url}" target="_blank" rel="nofollow"  class="wikipedia-link" style="text-decoration: none;"><span class="wrap-key" style="color: black; cursor: text;">More information: </span>WIKIPEDIA</a>
+            <p class="description"><span class="wrap-key">Origin: </span>${breeds[0].origin}</p>
+            <p class="description"><span class="wrap-key">Description: </span>${breeds[0].description}</p>
+            <p class="description"><span class="wrap-key">Temperament: </span>${breeds[0].temperament}</p>
+            <p class="wrap-key" style="color: black; cursor: text;">More information: <a class="link" href="${breeds[0].wikipedia_url}" target="_blank" rel="nofollow"  class="wikipedia-link" style="text-decoration: none;">WIKIPEDIA</a></p>
+            
           </div>
         </div> 
         `;
