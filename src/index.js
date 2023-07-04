@@ -4,7 +4,7 @@ import { getCatBreeds, createCatByBreed } from './cat-api';
 
 import SlimSelect from 'slim-select';
 
-import Notiflix from 'notiflix';
+import Notiflix, { Loading } from 'notiflix';
 
 const ref = {
   breedSelect: document.querySelector('.breed-select'),
@@ -15,6 +15,7 @@ const ref = {
 
 ref.loaderMassage.classList.remove('is-hidden');
 ref.errorMassage.classList.add('is-hidden');
+let isFirstSelection = false;
 
 getCatBreeds()
   .then(data => {
@@ -54,6 +55,11 @@ getCatBreeds()
   });
 
 ref.breedSelect.addEventListener('change', evt => {
+  if (!isFirstSelection) {
+    isFirstSelection = true;
+    ref.loaderMassage.classList.add('is-hidden');
+    return;
+  }
   ref.catCard.innerHTML = '';
   ref.loaderMassage.classList.remove('is-hidden');
   const selectedBreedId = evt.currentTarget.value;
