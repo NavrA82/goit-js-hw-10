@@ -22,7 +22,7 @@ export const getCatBreeds = () => {
     .catch(error => {
       console.log(error);
       Notiflix.Report.warning(
-        'the muscovites broke it all',
+        'THE MUSCOVITES BROKE IT ALL',
         'but the Muscovites cannot defeat the Ukrainians. We believe in Ukrainian defenders',
         'Ukraine will win',
         {
@@ -56,7 +56,7 @@ export const createCatByBreed = breedId => {
     })
     .catch(error => {
       Notiflix.Report.warning(
-        'the muscovites broke it all',
+        'THE MUSCOVITES BROKE IT ALL',
         'but the Muscovites cannot defeat the Ukrainians. We believe in Ukrainian defenders',
         'Ukraine will win',
         {

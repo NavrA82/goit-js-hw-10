@@ -32,7 +32,7 @@ getCatBreeds()
 
   .catch(error => {
     Notiflix.Report.warning(
-      'the muscovites broke it all',
+      'THE MUSCOVITES BROKE IT ALL',
       'but the Muscovites cannot defeat the Ukrainians. We believe in Ukrainian defenders',
       'Ukraine will win',
       {
@@ -60,23 +60,23 @@ ref.breedSelect.addEventListener('change', evt => {
 
     ref.loaderMassage.classList.add('is-hidden');
     Report.success(
-      'Make your choice',
+      'MAKE YOUR CHOICE',
       'if you are reading this message, you are definitely not a muscovite',
-      ';) Okay'
-      // {
-      //   width: '320px',
-      //   svgSize: '30px',
-      //   messageFontSize: '16px',
-      //   backgroundColor: '#e42525cd',
-      //   success: {
-      //     svgColor: '#f6c218',
-      //     titleColor: '#f6c218',
-      //     messageColor: '#f6c218',
-      //     buttonBackground: '#08aa31c2',
-      //     buttonColor: '#f6c218',
-      //     backOverlayColor: 'rgba(238,191,49,0.9)',
-      //   },
-      // }
+      ';) Okay',
+      {
+        width: '320px',
+        svgSize: '50px',
+        messageFontSize: '16px',
+        backgroundColor: '#08aa31',
+        success: {
+          svgColor: '#f6c218',
+          titleColor: '#f6c218',
+          messageColor: '#f6c218',
+          buttonBackground: '#88aa31',
+          buttonColor: '#f6c218',
+          backOverlayColor: 'rgba(238,191,49,0.9)',
+        },
+      }
     );
 
     return;
@@ -109,7 +109,7 @@ ref.breedSelect.addEventListener('change', evt => {
     })
     .catch(error => {
       Notiflix.Report.warning(
-        'the muscovites broke it all',
+        'THE MUSCOVITES BROKE IT ALL',
         'but the Muscovites cannot defeat the Ukrainians. We believe in Ukrainian defenders',
         'Ukraine will win',
         {
