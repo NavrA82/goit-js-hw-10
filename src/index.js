@@ -4,7 +4,7 @@ import { getCatBreeds, createCatByBreed } from './cat-api';
 
 import SlimSelect from 'slim-select';
 
-import Notiflix, { Loading } from 'notiflix';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const ref = {
   breedSelect: document.querySelector('.breed-select'),
@@ -57,7 +57,28 @@ getCatBreeds()
 ref.breedSelect.addEventListener('change', evt => {
   if (!isFirstSelection) {
     isFirstSelection = true;
+
     ref.loaderMassage.classList.add('is-hidden');
+    Report.success(
+      'Make your choice',
+      'if you are reading this message, you are definitely not a muscovite',
+      ';) Okay'
+      // {
+      //   width: '320px',
+      //   svgSize: '30px',
+      //   messageFontSize: '16px',
+      //   backgroundColor: '#e42525cd',
+      //   success: {
+      //     svgColor: '#f6c218',
+      //     titleColor: '#f6c218',
+      //     messageColor: '#f6c218',
+      //     buttonBackground: '#08aa31c2',
+      //     buttonColor: '#f6c218',
+      //     backOverlayColor: 'rgba(238,191,49,0.9)',
+      //   },
+      // }
+    );
+
     return;
   }
   ref.catCard.innerHTML = '';
