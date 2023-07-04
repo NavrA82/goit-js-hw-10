@@ -47,6 +47,7 @@ select.ss-main {
 }
 h2 {
   text-align: center;
+  text-transform: uppercase;
 }
 .loader {
   display: flex;
