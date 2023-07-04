@@ -13,26 +13,7 @@ const ref = {
   catCard: document.querySelector('.cat-info'),
 };
 
-Notiflix.Report.warning(
-  'Please choose a date in the future.',
-  'It seems, that you are from the country where the cruiser "Moscow" sank.',
-  'Sorry, I will be more careful',
-  {
-    width: '320px',
-    svgSize: '30px',
-    messageFontSize: '16px',
-    backgroundColor: '#e42525cd',
-    warning: {
-      svgColor: '#f6c218',
-      titleColor: '#f6c218',
-      messageColor: '#f6c218',
-      buttonBackground: '#08aa31c2',
-      buttonColor: '#f6c218',
-      backOverlayColor: 'rgba(238,191,49,0.9)',
-    },
-  }
-);
-ref.loaderMassage.classList.add('is-hidden');
+ref.loaderMassage.classList.remove('is-hidden');
 ref.errorMassage.classList.add('is-hidden');
 
 getCatBreeds()
@@ -49,22 +30,32 @@ getCatBreeds()
   })
 
   .catch(error => {
+    Notiflix.Report.warning(
+      'the muscovites broke it all',
+      'but the Muscovites cannot defeat the Ukrainians. We believe in Ukrainian defenders',
+      'Ukraine will win',
+      {
+        width: '320px',
+        svgSize: '30px',
+        messageFontSize: '16px',
+        backgroundColor: '#e42525cd',
+        warning: {
+          svgColor: '#f6c218',
+          titleColor: '#f6c218',
+          messageColor: '#f6c218',
+          buttonBackground: '#08aa31c2',
+          buttonColor: '#f6c218',
+          backOverlayColor: 'rgba(238,191,49,0.9)',
+        },
+      }
+    );
     console.log(error);
     throw error;
   });
 
-ref.catCard.innerHTML = '';
-
-// window.addEventListener('beforeunload', function (event) {
-//   event.preventDefault();
-//   event.returnValue = 'Ви впевнені, що хочете покинути цю сторінку?';
-// });
-
 ref.breedSelect.addEventListener('change', evt => {
-  // ref.loaderMassage.classList.remove('is-hidden');
-
-  // ref.errorMassage.classList.remove('is-hidden');
-
+  ref.catCard.innerHTML = '';
+  ref.loaderMassage.classList.remove('is-hidden');
   const selectedBreedId = evt.currentTarget.value;
 
   createCatByBreed(selectedBreedId)
@@ -87,8 +78,28 @@ ref.breedSelect.addEventListener('change', evt => {
           </div>
         </div> 
         `;
+      ref.loaderMassage.classList.add('is-hidden');
     })
     .catch(error => {
+      Notiflix.Report.warning(
+        'the muscovites broke it all',
+        'but the Muscovites cannot defeat the Ukrainians. We believe in Ukrainian defenders',
+        'Ukraine will win',
+        {
+          width: '320px',
+          svgSize: '30px',
+          messageFontSize: '16px',
+          backgroundColor: '#e42525cd',
+          warning: {
+            svgColor: '#f6c218',
+            titleColor: '#f6c218',
+            messageColor: '#f6c218',
+            buttonBackground: '#08aa31c2',
+            buttonColor: '#f6c218',
+            backOverlayColor: 'rgba(238,191,49,0.9)',
+          },
+        }
+      );
       console.log(error);
       throw error;
     });
