@@ -15,6 +15,7 @@ const ref = {
 
 ref.loaderMassage.classList.remove('is-hidden');
 ref.errorMassage.classList.add('is-hidden');
+
 let isFirstSelection = false;
 
 getCatBreeds()
@@ -59,6 +60,7 @@ ref.breedSelect.addEventListener('change', evt => {
     isFirstSelection = true;
 
     ref.loaderMassage.classList.add('is-hidden');
+
     Report.success(
       'MAKE YOUR CHOICE',
       'if you are reading this message, you are definitely not a muscovite',

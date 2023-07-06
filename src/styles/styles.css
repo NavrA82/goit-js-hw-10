@@ -11,6 +11,7 @@ body {
   align-items: center;
   background-color: rgba(238, 191, 49, 0.9);
   border-radius: 8px;
+  height: 98vh;
 }
 
 img {
